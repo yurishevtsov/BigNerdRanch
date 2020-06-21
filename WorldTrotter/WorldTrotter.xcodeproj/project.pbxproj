@@ -16,6 +16,7 @@
 		BFD4E056249E57AA00369788 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E055249E57AA00369788 /* WorldTrotterTests.swift */; };
 		BFD4E061249E57AA00369788 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E060249E57AA00369788 /* WorldTrotterUITests.swift */; };
 		BFD4E0AB249FDA8200369788 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E0AA249FDA8200369788 /* MapViewController.swift */; };
+		BFD4E0AD249FE0F600369788 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4E0AC249FE0F600369788 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BFD4E060249E57AA00369788 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		BFD4E062249E57AA00369788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD4E0AA249FDA8200369788 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BFD4E0AC249FE0F600369788 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				BFD4E040249E57A900369788 /* SceneDelegate.swift */,
 				BFD4E042249E57A900369788 /* ConversionViewController.swift */,
 				BFD4E0AA249FDA8200369788 /* MapViewController.swift */,
+				BFD4E0AC249FE0F600369788 /* QuizViewController.swift */,
 				BFD4E044249E57A900369788 /* Main.storyboard */,
 				BFD4E047249E57AA00369788 /* Assets.xcassets */,
 				BFD4E049249E57AA00369788 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD4E043249E57A900369788 /* ConversionViewController.swift in Sources */,
+				BFD4E0AD249FE0F600369788 /* QuizViewController.swift in Sources */,
 				BFD4E03F249E57A900369788 /* AppDelegate.swift in Sources */,
 				BFD4E041249E57A900369788 /* SceneDelegate.swift in Sources */,
 				BFD4E0AB249FDA8200369788 /* MapViewController.swift in Sources */,

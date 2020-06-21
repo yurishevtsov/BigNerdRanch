@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QuizViewController.swift
 //  Quiz
 //
 //  Created by Yuri Shevtsov on 6/13/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuizViewController: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         "What is cognac made from?"
     ]
     let answers: [String] = [
-    "`what the fuck`",
+    "14",
     "Montpelier",
     "Grapes"
     ]

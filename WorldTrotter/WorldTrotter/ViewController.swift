@@ -22,8 +22,106 @@ class ViewController: UIViewController {
 //        secondView.backgroundColor = UIColor.green
 //        firstView.addSubview(secondView)
 //    }
+//    var gradSwitchState: Bool = false
+//
+//    var animSwitchState: Bool = false
+    @IBOutlet var stateGradSwitch: UISwitch!
+    @IBOutlet var stateAnimSwitch: UISwitch!
+    
 
+    @IBAction func toggleGradient(_ sender: UISwitch) {
+        if stateGradSwitch.isOn {
+            
+            
+            stateGradSwitch.setOn(false, animated:true)
+        } else {
+            stateGradSwitch.setOn(true, animated:true)
+        }
 
+    }
+    
+    @IBAction func toggleAnim(_ sender: UISwitch) {
 
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        stateGradSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
+    }
+ 
+    @objc func stateChanged(switchState: UISwitch) {
+        if switchState.isOn {
+//            textLabel.text = "The Switch is On"
+        } else {
+//            textLabel.text = "The Switch is Off"
+        }
+    }
+    
+    
+    
+    let grad = CAGradientLayer()
+    
+    func gradient() {
+        grad.colors = [UIColor.yellow.cgColor, UIColor.blue.cgColor, UIColor.yellow.cgColor]
+
+        grad.locations = [0 , 1]
+        grad.startPoint = CGPoint(x: 0, y: 0)
+        grad.endPoint = CGPoint(x: 0, y: 1)
+        grad.frame = view.frame
+    }
+    
+    func animate() {
+        gradient()
+        let gradAnim = CABasicAnimation(keyPath: "locations")
+        gradAnim.fromValue = [0, 0, 0]
+        gradAnim.toValue = [0.75, 1, 1]
+        gradAnim.duration = 2
+        gradAnim.autoreverses = true
+        gradAnim.repeatCount = Float.infinity
+        grad.add(gradAnim, forKey: nil)
+    }
+
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+////        let fullScreen: CGRect = UIScreen.main.bounds
+//
+//
+//
+//        let grad = CAGradientLayer()
+//        grad.colors = [UIColor.yellow.cgColor, UIColor.blue.cgColor, UIColor.yellow.cgColor]
+////        grad.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 2)
+//
+//
+//        grad.locations = [0 , 1]
+//        grad.startPoint = CGPoint(x: 0, y: 0)
+//        grad.endPoint = CGPoint(x: 0, y: 1)
+//        grad.frame = view.frame
+//
+////        func animate() {
+////            let gradAnim = CABasicAnimation(keyPath: "locations")
+////            gradAnim.fromValue = [0, 0, 0.25]
+////            gradAnim.toValue = [0.75, 1, 1]
+////            gradAnim.duration = 1
+////            gradAnim.autoreverses = true
+////            gradAnim.repeatCount = Float.infinity
+////            grad.add(gradAnim, forKey: nil)
+////        }
+//        let gradAnim = CABasicAnimation(keyPath: "locations")
+//        gradAnim.fromValue = [0, 0, 0]
+//        gradAnim.toValue = [0.75, 1, 1]
+//        gradAnim.duration = 2
+//        gradAnim.autoreverses = true
+//        gradAnim.repeatCount = Float.infinity
+//        grad.add(gradAnim, forKey: nil)
+//
+//        view.layer.insertSublayer(grad, at: 0)
+//
+//
+//
+//    }
+//
 }
 

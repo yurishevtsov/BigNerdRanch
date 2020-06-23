@@ -23,11 +23,30 @@ class ConversionViewController: UIViewController {
 //        firstView.addSubview(secondView)
 //    }
 
+    
+    
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+
+//            view.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
             print("ConversionViewController loaded its view.")
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        print("viewWillAppear(_:) called")
+//        
+//        view.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1.0)
+//    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
+        view.backgroundColor = UIColor(
+            red: .random(in: 0...1),
+            green: .random(in: 0...1),
+            blue: .random(in: 0...1),
+            alpha: 1.0)
+    }
 }
-

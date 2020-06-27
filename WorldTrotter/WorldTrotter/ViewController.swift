@@ -25,46 +25,11 @@ class ViewController: UIViewController {
 //    var gradSwitchState: Bool = false
 //
 //    var animSwitchState: Bool = false
-    @IBOutlet var stateGradSwitch: UISwitch!
-    @IBOutlet var stateAnimSwitch: UISwitch!
     
-
-    @IBAction func toggleGradient(_ sender: UISwitch) {
-        if stateGradSwitch.isOn {
-            
-            
-            stateGradSwitch.setOn(false, animated:true)
-        } else {
-            stateGradSwitch.setOn(true, animated:true)
-        }
-
-    }
-    
-    @IBAction func toggleAnim(_ sender: UISwitch) {
-
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        stateGradSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
-    }
- 
-    @objc func stateChanged(switchState: UISwitch) {
-        if switchState.isOn {
-//            textLabel.text = "The Switch is On"
-        } else {
-//            textLabel.text = "The Switch is Off"
-        }
-    }
-    
-    
-    
-    let grad = CAGradientLayer()
+    var grad = CAGradientLayer()
     
     func gradient() {
         grad.colors = [UIColor.yellow.cgColor, UIColor.blue.cgColor, UIColor.yellow.cgColor]
-
         grad.locations = [0 , 1]
         grad.startPoint = CGPoint(x: 0, y: 0)
         grad.endPoint = CGPoint(x: 0, y: 1)
@@ -81,6 +46,53 @@ class ViewController: UIViewController {
         gradAnim.repeatCount = Float.infinity
         grad.add(gradAnim, forKey: nil)
     }
+    
+    @IBOutlet var stateGradSwitch: UISwitch!
+    @IBOutlet var stateAnimSwitch: UISwitch!
+    
+
+    @IBAction func toggleGradient(_ sender: UISwitch) {
+        if sender.isOn {
+            print("toggled on")
+            gradient()
+            view.layer.insertSublayer(grad, at: 0)
+        } else {
+            print("toggled off")
+            grad.removeFromSuperlayer()
+        }
+    }
+    
+    @IBAction func toggleAnim(_ sender: UISwitch) {
+        if sender.isOn {
+            print("toggled on")
+            animate()
+            view.layer.insertSublayer(grad, at: 0)
+        } else {
+            print("toggled off")
+            if stateGradSwitch.isOn {
+                grad.removeFromSuperlayer()
+                grad = CAGradientLayer()
+                gradient()
+                view.layer.insertSublayer(grad, at: 0)
+            } else {
+                grad.removeFromSuperlayer()
+            }
+        }
+    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        stateGradSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
+//    }
+//
+//    @objc func stateChanged(switchState: UISwitch) {
+//        if switchState.isOn {
+////            textLabel.text = "The Switch is On"
+//        } else {
+////            textLabel.text = "The Switch is Off"
+//        }
+//    }
+    
 
 //
 //    override func viewDidLoad() {

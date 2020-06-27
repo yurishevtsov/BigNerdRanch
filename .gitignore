@@ -1,3 +1,8 @@
+# Xcode
+*.pbxuser
+project.xcworkspace/
+xcuserdata/
+
+# Practice projects
 AR/
-*.xcuserstate
 SwitchImpl/

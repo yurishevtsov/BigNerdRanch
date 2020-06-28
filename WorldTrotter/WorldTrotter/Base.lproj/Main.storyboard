@@ -36,10 +36,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vXO-XS-qNN">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vXO-XS-qNN">
                                         <rect key="frame" x="232" y="0.0" width="51" height="31"/>
                                         <connections>
-                                            <action selector="toggleGradient:" destination="BYZ-38-t0r" eventType="valueChanged" id="IzP-yP-7Lj"/>
+                                            <action selector="toggleGradient:" destination="BYZ-38-t0r" eventType="valueChanged" id="UYy-QS-MEz"/>
                                         </connections>
                                     </switch>
                                 </subviews>
@@ -53,10 +53,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hJ-fK-cxu">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5hJ-fK-cxu">
                                         <rect key="frame" x="231.66666666666663" y="0.0" width="51" height="31"/>
                                         <connections>
-                                            <action selector="toggleAnim:" destination="BYZ-38-t0r" eventType="valueChanged" id="y6b-od-tNw"/>
+                                            <action selector="toggleAnimation:" destination="BYZ-38-t0r" eventType="valueChanged" id="0yh-rj-OYW"/>
                                         </connections>
                                     </switch>
                                 </subviews>
@@ -131,8 +131,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="stateAnimSwitch" destination="5hJ-fK-cxu" id="Njb-by-d4f"/>
-                        <outlet property="stateGradSwitch" destination="vXO-XS-qNN" id="5Xv-4U-ixE"/>
+                        <outlet property="animationSwitch" destination="5hJ-fK-cxu" id="qfL-FZ-15b"/>
+                        <outlet property="gradientSwitch" destination="vXO-XS-qNN" id="bqU-Ob-UTa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

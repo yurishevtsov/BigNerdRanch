@@ -9,131 +9,81 @@
 import UIKit
 
 class ViewController: UIViewController {
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        let firstFrame = CGRect(x: 160, y: 240, width: 100, height: 150)
-//        let firstView = UIView(frame: firstFrame)
-//        firstView.backgroundColor = UIColor.blue
-//        view.addSubview(firstView)
-//
-//        let secondFrame = CGRect(x: 20, y: 30, width: 50, height: 50)
-//        let secondView = UIView(frame: secondFrame)
-//        secondView.backgroundColor = UIColor.green
-//        firstView.addSubview(secondView)
-//    }
-//    var gradSwitchState: Bool = false
-//
-//    var animSwitchState: Bool = false
+    @IBOutlet var gradientSwitch: UISwitch!
+    @IBOutlet var animationSwitch: UISwitch!
+        
+    var nonAnimatedGradient: CAGradientLayer!
+    var animatedGradient: CAGradientLayer!
     
-    var grad = CAGradientLayer()
-    
-    func gradient() {
-        grad.colors = [UIColor.yellow.cgColor, UIColor.blue.cgColor, UIColor.yellow.cgColor]
-        grad.locations = [0 , 1]
-        grad.startPoint = CGPoint(x: 0, y: 0)
-        grad.endPoint = CGPoint(x: 0, y: 1)
-        grad.frame = view.frame
+    override
+    func viewDidLoad() {
+        super.viewDidLoad()
+        nonAnimatedGradient = createGradientLayer()
+        animatedGradient = createGradientLayer()
     }
     
-    func animate() {
-        gradient()
-        let gradAnim = CABasicAnimation(keyPath: "locations")
-        gradAnim.fromValue = [0, 0, 0]
-        gradAnim.toValue = [0.75, 1, 1]
-        gradAnim.duration = 2
-        gradAnim.autoreverses = true
-        gradAnim.repeatCount = Float.infinity
-        grad.add(gradAnim, forKey: nil)
+    func createGradientLayer() -> CAGradientLayer {
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.yellow.cgColor, UIColor.blue.cgColor, UIColor.yellow.cgColor]
+        gradient.locations = [0 , 1]
+        gradient.startPoint = CGPoint(x: 1, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        gradient.frame = view.frame
+        return gradient
     }
     
-    @IBOutlet var stateGradSwitch: UISwitch!
-    @IBOutlet var stateAnimSwitch: UISwitch!
+    // MARK: Non Animated Gradient
     
+    func enableNonAnimatedGradient() {
+        view.layer.insertSublayer(nonAnimatedGradient, at: 0)
+    }
+    
+    func disableNonAnimatedGradient() {
+        nonAnimatedGradient.removeFromSuperlayer()
+        gradientSwitch.setOn(false, animated: true)
+    }
 
     @IBAction func toggleGradient(_ sender: UISwitch) {
         if sender.isOn {
-            print("toggled on")
-            gradient()
-            view.layer.insertSublayer(grad, at: 0)
+            print("gradient switch is toggled on")
+            disableAnimatedGradient()
+            enableNonAnimatedGradient()
         } else {
-            print("toggled off")
-            grad.removeFromSuperlayer()
+            print("gradient switch is toggled off")
+            disableNonAnimatedGradient()
         }
     }
     
-    @IBAction func toggleAnim(_ sender: UISwitch) {
+    // MARK: Animated Gradient
+        
+    func createAnimation() -> CABasicAnimation {
+        let animation = CABasicAnimation(keyPath: "locations")
+        animation.fromValue = [0, 0, 0]
+        animation.toValue = [0.75, 1, 1]
+        animation.duration = 2
+        animation.autoreverses = true
+        animation.repeatCount = Float.infinity
+        return animation
+    }
+        
+    func enableAnimatedGradient() {
+        animatedGradient.add(createAnimation(), forKey: nil)
+        view.layer.insertSublayer(animatedGradient, at: 0)
+    }
+    
+    func disableAnimatedGradient() {
+        animatedGradient.removeFromSuperlayer()
+        animationSwitch.setOn(false, animated: true)
+    }
+    
+    @IBAction func toggleAnimation(_ sender: UISwitch) {
         if sender.isOn {
-            print("toggled on")
-            animate()
-            view.layer.insertSublayer(grad, at: 0)
+            print("animation switch is toggled on")
+            disableNonAnimatedGradient()
+            enableAnimatedGradient()
         } else {
-            print("toggled off")
-            if stateGradSwitch.isOn {
-                grad.removeFromSuperlayer()
-                grad = CAGradientLayer()
-                gradient()
-                view.layer.insertSublayer(grad, at: 0)
-            } else {
-                grad.removeFromSuperlayer()
-            }
+            print("animation switch is toggled off")
+            disableAnimatedGradient()
         }
     }
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        stateGradSwitch.addTarget(self, action: #selector(stateChanged), for: .valueChanged)
-//    }
-//
-//    @objc func stateChanged(switchState: UISwitch) {
-//        if switchState.isOn {
-////            textLabel.text = "The Switch is On"
-//        } else {
-////            textLabel.text = "The Switch is Off"
-//        }
-//    }
-    
-
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-////        let fullScreen: CGRect = UIScreen.main.bounds
-//
-//
-//
-//        let grad = CAGradientLayer()
-//        grad.colors = [UIColor.yellow.cgColor, UIColor.blue.cgColor, UIColor.yellow.cgColor]
-////        grad.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 2)
-//
-//
-//        grad.locations = [0 , 1]
-//        grad.startPoint = CGPoint(x: 0, y: 0)
-//        grad.endPoint = CGPoint(x: 0, y: 1)
-//        grad.frame = view.frame
-//
-////        func animate() {
-////            let gradAnim = CABasicAnimation(keyPath: "locations")
-////            gradAnim.fromValue = [0, 0, 0.25]
-////            gradAnim.toValue = [0.75, 1, 1]
-////            gradAnim.duration = 1
-////            gradAnim.autoreverses = true
-////            gradAnim.repeatCount = Float.infinity
-////            grad.add(gradAnim, forKey: nil)
-////        }
-//        let gradAnim = CABasicAnimation(keyPath: "locations")
-//        gradAnim.fromValue = [0, 0, 0]
-//        gradAnim.toValue = [0.75, 1, 1]
-//        gradAnim.duration = 2
-//        gradAnim.autoreverses = true
-//        gradAnim.repeatCount = Float.infinity
-//        grad.add(gradAnim, forKey: nil)
-//
-//        view.layer.insertSublayer(grad, at: 0)
-//
-//
-//
-//    }
-//
 }
-

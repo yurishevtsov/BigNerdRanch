@@ -14,10 +14,10 @@ class MapViewController: UIViewController {
     var mapView: MKMapView!
     
     override func loadView() {
-        // create a map view
+        // MARK: Create a map view
         mapView = MKMapView()
         
-        // set it as THE view of this view controller
+        // MARK: Set it as THE view of this view controller
         view = mapView
         
         let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
@@ -52,7 +52,6 @@ class MapViewController: UIViewController {
         
         labelTopConstrain.isActive = true
         labelLeadingConstrain.isActive = true
-        
         
         let poiSwitch = UISwitch()
         
@@ -89,7 +88,7 @@ class MapViewController: UIViewController {
             break
         }
     }
-    
+ // MARK: test
     @objc func pointsOfInterestFilter(_ switchControl: UISwitch) {
         if (switchControl.isOn) {
             print("PoI enabled")

@@ -41,6 +41,8 @@
 		BF18A51724B1194E00F75536 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		BF18A51B24B11D7900F75536 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF18A51D24B11D9400F75536 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF18A51E24B1283400F75536 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		BF18A51F24B1283400F75536 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFD4E03B249E57A900369788 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD4E03E249E57A900369788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD4E040249E57A900369788 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				en,
 				Base,
 				es,
+				ru,
 			);
 			mainGroup = BFD4E032249E57A900369788;
 			productRefGroup = BFD4E03C249E57A900369788 /* Products */;
@@ -314,6 +317,7 @@
 			children = (
 				BF18A51B24B11D7900F75536 /* es */,
 				BF18A51D24B11D9400F75536 /* en */,
+				BF18A51F24B1283400F75536 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -324,6 +328,7 @@
 				BFD4E045249E57A900369788 /* Base */,
 				BF18A51624B1186200F75536 /* en */,
 				BF18A51724B1194E00F75536 /* es */,
+				BF18A51E24B1283400F75536 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

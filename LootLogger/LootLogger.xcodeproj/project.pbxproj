@@ -17,6 +17,7 @@
 		BF6781D624BA44BE007696CA /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6781D524BA44BE007696CA /* ItemsViewController.swift */; };
 		BF6781D824BA4759007696CA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6781D724BA4759007696CA /* Item.swift */; };
 		BF6781DA24BA57E8007696CA /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6781D924BA57E8007696CA /* ItemStore.swift */; };
+		BFC8001F24C348FB00E69B48 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC8001E24C348FA00E69B48 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BF6781D524BA44BE007696CA /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		BF6781D724BA4759007696CA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BF6781D924BA57E8007696CA /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		BFC8001E24C348FA00E69B48 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				BF6781A524BA44A2007696CA /* AppDelegate.swift */,
 				BF6781A724BA44A2007696CA /* SceneDelegate.swift */,
+				BFC8001E24C348FA00E69B48 /* ItemCell.swift */,
 				BF6781D724BA4759007696CA /* Item.swift */,
 				BF6781D524BA44BE007696CA /* ItemsViewController.swift */,
 				BF6781D924BA57E8007696CA /* ItemStore.swift */,
@@ -267,6 +270,7 @@
 			files = (
 				BF6781D824BA4759007696CA /* Item.swift in Sources */,
 				BF6781D624BA44BE007696CA /* ItemsViewController.swift in Sources */,
+				BFC8001F24C348FB00E69B48 /* ItemCell.swift in Sources */,
 				BF6781A624BA44A2007696CA /* AppDelegate.swift in Sources */,
 				BF6781DA24BA57E8007696CA /* ItemStore.swift in Sources */,
 				BF6781A824BA44A2007696CA /* SceneDelegate.swift in Sources */,

@@ -12,7 +12,7 @@ class ItemsViewController: UITableViewController {
     // Add a property for an ItemStore
     var itemStore: ItemStore!
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
 //        // Make a new index path for the 0th section, last row
 //        let lastRow = tableView.numberOfRows(inSection: 0)
 //        let indexPath = IndexPath(row: lastRow, section: 0)
@@ -32,23 +32,6 @@ class ItemsViewController: UITableViewController {
             
             // Insert this row into the table
             tableView.insertRows(at: [indexPath], with: .automatic)
-        }
-    }
-    
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        // If you're currently in editing mode...
-        if isEditing {
-            // Change text of button to inform user of state
-            sender.setTitle("Edit", for: .normal)
-            
-            // Turn off editing mode
-            setEditing(false, animated: true)
-        } else {
-            // Change text of button to inform user of state
-            sender.setTitle("Done", for: .normal)
-            
-            setEditing(true, animated: true)
-            // Enter editing mode
         }
     }
     
@@ -121,5 +104,17 @@ class ItemsViewController: UITableViewController {
         default:
             preconditionFailure("Unexpected segue identifier")
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
     }
 }

@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rfW-N8-4nx">
-                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <rect key="frame" x="8" y="96" width="398" height="709"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YRw-wc-RZy">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
@@ -146,10 +146,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="klV-sH-1kI">
-                                        <rect key="frame" x="0.0" y="126" width="398" height="632"/>
+                                        <rect key="frame" x="0.0" y="126" width="398" height="583"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-gp-l5C">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="632"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="583"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -162,13 +162,26 @@
                                     <constraint firstItem="6IO-bW-eF1" firstAttribute="leading" secondItem="Z1I-lW-b4b" secondAttribute="leading" id="h41-MG-l4Z"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7D-Ui-KXy">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="vkl-aT-cNc">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="rPq-Ga-jIi" id="Gm5-G0-FjO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="e7D-Ui-KXy" firstAttribute="top" secondItem="rfW-N8-4nx" secondAttribute="bottom" constant="8" id="3E1-xj-nqB"/>
                             <constraint firstItem="rfW-N8-4nx" firstAttribute="top" secondItem="TaW-c0-WXD" secondAttribute="top" constant="8" id="4Sc-30-uFl"/>
                             <constraint firstItem="rfW-N8-4nx" firstAttribute="leading" secondItem="TaW-c0-WXD" secondAttribute="leading" constant="8" id="6wB-ZY-rBs"/>
-                            <constraint firstItem="TaW-c0-WXD" firstAttribute="bottom" secondItem="rfW-N8-4nx" secondAttribute="bottom" constant="8" id="b6Y-qU-l7s"/>
+                            <constraint firstItem="e7D-Ui-KXy" firstAttribute="leading" secondItem="eF4-1V-fjB" secondAttribute="leading" id="Ix0-w9-zIq"/>
+                            <constraint firstItem="TaW-c0-WXD" firstAttribute="bottom" secondItem="e7D-Ui-KXy" secondAttribute="bottom" id="UR1-sd-org"/>
+                            <constraint firstAttribute="trailing" secondItem="e7D-Ui-KXy" secondAttribute="trailing" id="fRC-ky-GXd"/>
                             <constraint firstItem="TaW-c0-WXD" firstAttribute="trailing" secondItem="rfW-N8-4nx" secondAttribute="trailing" constant="8" id="gJ7-u8-DNe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TaW-c0-WXD"/>

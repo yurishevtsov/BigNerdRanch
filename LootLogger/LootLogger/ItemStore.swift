@@ -51,7 +51,7 @@ class ItemStore {
 //        }
 //    }
     
-    @objc func saveChanges() -> Bool {
+    @objc func saveChanges() throws {
         print("Saving items to: \(itemArchiveURL)")
         
         do {
@@ -59,10 +59,8 @@ class ItemStore {
             let data = try encoder.encode(allItems)
             try data.write(to: itemArchiveURL, options: [.atomic])
             print("Saved all of the items")
-            return true
         } catch let encodingError {
             print("Error encoding allItems: \(encodingError)")
-            return false
         }
     }
     

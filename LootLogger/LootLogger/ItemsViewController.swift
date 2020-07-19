@@ -87,9 +87,6 @@ class ItemsViewController: UITableViewController {
         // tableView.rowHeight = 65
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
-        
-        // Set custom back button title
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

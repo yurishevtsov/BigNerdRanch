@@ -66,6 +66,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="LootLogger" id="RbT-KL-TND">
+                        <barButtonItem key="backBarButtonItem" title="Test" id="y3j-wI-Ez1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zoo-fk-MCs">
                             <connections>
                                 <action selector="addNewItem:" destination="fC1-6s-xC5" id="0nH-ZR-FQD"/>

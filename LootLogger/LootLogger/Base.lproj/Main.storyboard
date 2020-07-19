@@ -66,7 +66,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="LootLogger" id="RbT-KL-TND">
-                        <barButtonItem key="backBarButtonItem" title="Test" id="y3j-wI-Ez1"/>
+                        <barButtonItem key="backBarButtonItem" title="Log" id="y3j-wI-Ez1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zoo-fk-MCs">
                             <connections>
                                 <action selector="addNewItem:" destination="fC1-6s-xC5" id="0nH-ZR-FQD"/>
@@ -147,16 +147,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="klV-sH-1kI">
-                                        <rect key="frame" x="0.0" y="126" width="398" height="632"/>
+                                        <rect key="frame" x="0.0" y="126" width="398" height="594"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-gp-l5C">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="632"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="594"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW0-JD-4v9">
+                                        <rect key="frame" x="0.0" y="728" width="398" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="glh-AQ-A5a" firstAttribute="leading" secondItem="6IO-bW-eF1" secondAttribute="leading" id="1Dr-ah-Eov"/>
@@ -193,6 +197,27 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1876.8115942028987" y="64.955357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KFL-Ye-Bi4">
+            <objects>
+                <viewController id="v0G-JJ-cj2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3kQ-xA-1Ig">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fsv-mP-v9z">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Uaw-3A-cEM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6U-1f-esK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2795" y="154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G70-Iu-hce">

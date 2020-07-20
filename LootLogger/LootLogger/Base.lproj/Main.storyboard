@@ -146,16 +146,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="klV-sH-1kI">
-                                        <rect key="frame" x="0.0" y="126" width="398" height="583"/>
+                                        <rect key="frame" x="0.0" y="126" width="398" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-gp-l5C">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="583"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="QI7-Bi-e1Q">
+                                        <rect key="frame" x="0.0" y="154.5" width="398" height="554.5"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="glh-AQ-A5a" firstAttribute="leading" secondItem="6IO-bW-eF1" secondAttribute="leading" id="1Dr-ah-Eov"/>
@@ -192,6 +195,7 @@
                     <navigationItem key="navigationItem" id="ikD-FX-JaU"/>
                     <connections>
                         <outlet property="dateLabel" destination="CPD-gp-l5C" id="Lpd-5G-4WP"/>
+                        <outlet property="imageView" destination="QI7-Bi-e1Q" id="yqR-LN-akn"/>
                         <outlet property="nameField" destination="glh-AQ-A5a" id="lbV-XH-wJc"/>
                         <outlet property="serialNumberField" destination="6IO-bW-eF1" id="HK6-mp-U1e"/>
                         <outlet property="valueField" destination="Z1I-lW-b4b" id="0Te-Ra-nV6"/>

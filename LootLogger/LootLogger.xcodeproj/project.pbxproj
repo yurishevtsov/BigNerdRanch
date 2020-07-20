@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4ADF3524C5136400AFC52E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4ADF3424C5136400AFC52E /* ImageStore.swift */; };
 		BF6781A624BA44A2007696CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6781A524BA44A2007696CA /* AppDelegate.swift */; };
 		BF6781A824BA44A2007696CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6781A724BA44A2007696CA /* SceneDelegate.swift */; };
 		BF6781AD24BA44A2007696CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6781AB24BA44A2007696CA /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF4ADF3424C5136400AFC52E /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		BF6781A224BA44A2007696CA /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6781A524BA44A2007696CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF6781A724BA44A2007696CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				BF6781D724BA4759007696CA /* Item.swift */,
 				BF6781D524BA44BE007696CA /* ItemsViewController.swift */,
 				BFC8002024C3633900E69B48 /* DetailViewController.swift */,
+				BF4ADF3424C5136400AFC52E /* ImageStore.swift */,
 				BF6781D924BA57E8007696CA /* ItemStore.swift */,
 				BF6781AB24BA44A2007696CA /* Main.storyboard */,
 				BF6781AE24BA44A3007696CA /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 				BF6781D824BA4759007696CA /* Item.swift in Sources */,
 				BF6781D624BA44BE007696CA /* ItemsViewController.swift in Sources */,
 				BFC8001F24C348FB00E69B48 /* ItemCell.swift in Sources */,
+				BF4ADF3524C5136400AFC52E /* ImageStore.swift in Sources */,
 				BF6781A624BA44A2007696CA /* AppDelegate.swift in Sources */,
 				BF6781DA24BA57E8007696CA /* ItemStore.swift in Sources */,
 				BF6781A824BA44A2007696CA /* SceneDelegate.swift in Sources */,
@@ -453,6 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5TZV337LSA;
 				INFOPLIST_FILE = LootLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5TZV337LSA;
 				INFOPLIST_FILE = LootLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

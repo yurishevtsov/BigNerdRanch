@@ -109,6 +109,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         
         present(alertController, animated: true, completion: nil)
     }
+    @IBAction func deleteImage(_ sender: Any) {
+        imageView.image.rem
+    }
     
     func imagePicker(for sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
         let imagePicker = UIImagePickerController()

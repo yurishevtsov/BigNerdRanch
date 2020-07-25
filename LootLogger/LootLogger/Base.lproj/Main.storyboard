@@ -173,6 +173,11 @@
                                             <action selector="choosePhotoSource:" destination="rPq-Ga-jIi" id="Gm5-G0-FjO"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Item" systemItem="trash" id="gaD-XE-Sth">
+                                        <connections>
+                                            <action selector="deleteImage:" destination="rPq-Ga-jIi" id="Lgd-xO-hb7"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
